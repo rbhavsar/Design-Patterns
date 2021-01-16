@@ -17,6 +17,7 @@ public class DateUtil implements Serializable {
 
   }
 
+  //Saves memory because object is not created at each request. Only single instance is reused again and again
   //mark method sync to solve the instace creation when multiple thread access this method... Assume two threads access this method at same time then it will create two instace
   public static DateUtil getInstace(){ // This is lazy intialization
     if (instace == null) {
